@@ -167,6 +167,12 @@ function mobileNav_init(){
 	$('.headerA .header').append('<div class="mobile-nav"></div>');
 	$('.mobile-nav').append('<div class="menu-btn" id="menu-btn"><div></div><span></span><span></span><span></span></div>');
 	$('.mobile-nav').append('<div class="mobileMenu"></div>');
+	var searchBar = $('#txtSiteSearchQu').detach();
+	var searchButton = $('.sitesearch').find('input[type=submit]').attr('value', 'Search').detach();
+	$('.mobileMenu').append('<div class="mobileSearchBar"></div>');
+	$('.mobileSearchBar').append('<span>To search for a phrase, enclose it "in quotes"</span>');
+	$('.mobileSearchBar').append(searchBar);
+	$('.mobileSearchBar').append(searchButton);
 	$('.mobileMenu').append('<ul class="parentMenu"></ul>');
 
 	var htmlArray = [];
@@ -317,7 +323,7 @@ var responsiveApp = {
 				$(this).addClass("invisibleQuote").hide();
 			}
 		});
-		$('.keepVisible').append("<div style='margin-top:17px; display: inline;' id='quoteReadMore'><a href='javascript:void(0);'>... Read more</a></div>")
+		$('.keepVisible').append("<div style='margin-top:17px; display: inline;' id='quoteReadMore'><a href='javascript:void(0);'>... Read more</a></div>");
 	},
 	quoteReadMoreTrigger: function(){
 		$('#quoteReadMore').hide();
@@ -365,6 +371,29 @@ var responsiveApp = {
 		$("tr[contentrow='" + makeVisible + "']").each(function(index, el) {
 			$(this).fadeToggle(300);
 		});
+	},
+	jamsConnectShorten: function(){
+		$('.textblock_JamsConnectDescription p').each(function(){
+			if($(this).index()>11){
+				$(this).hide();
+			}else if($(this).index()==11){
+				$(this).append("<div style='margin-top:17px; display: inline;' id='jamsConnectReadMore'><a href='javascript:void(0);'>... Read more</a></div>");
+			}
+		});
+		$('.textblock_JamsConnectDescription ul').each(function(){
+			if($(this).index()>12){
+				$(this).hide();
+			}
+		});		
+	},
+	jamsConnectReadMoreTrigger: function(){
+		$('.textblock_JamsConnectDescription p').each(function(){
+			$(this).show();
+		});
+		$('.textblock_JamsConnectDescription ul').each(function(){
+			$(this).show();			
+		});	
+		$('#jamsConnectReadMore').hide();
 	}
 }	
 
@@ -382,6 +411,7 @@ window.onload = function(e){
 		$('body').on('click', '#quoteReadMore', responsiveApp.quoteReadMoreTrigger);
 		$('body').on('click', '#searchSeeMore', responsiveApp.neutralsSearchSeeMoreTrigger);
 		$('body').on('click', '.titleRow', responsiveApp.cleMenuTrigger);
+		$('body').on('click', '#jamsConnectReadMore', responsiveApp.jamsConnectReadMoreTrigger);
 
 		responsiveApp.navSlider();	
 		responsiveApp.neutralDetails();
@@ -391,5 +421,6 @@ window.onload = function(e){
 		responsiveApp.renameLocationListing();
 		responsiveApp.neutralsSearchSeeMore();
 		responsiveApp.cleMenuInit();
+		responsiveApp.jamsConnectShorten();
 	}
 };

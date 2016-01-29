@@ -1297,4 +1297,90 @@ body.servicesdetail .listing .federalJudgeMarker
 		max-width: 480px;
 		margin-bottom: 14px;
 	}
+	.mobileSearchBar{
+		background: #004990;
+	    background: -moz-linear-gradient(top, #004990 0%, #37669F  100%);
+	    background: -webkit-linear-gradient(top, #004990 0%,#37669F  100%);
+	    background: linear-gradient(to bottom, #004990 0%,#37669F  100%);
+	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004990', endColorstr='#37669F ',GradientType=0 );
+	    padding: 15px 20px;
+	    border-bottom: 1px solid #124A8D;
+	    text-align: center;
+	}
+	.mobileSearchBar input[type="text"]{
+		width: 70%;
+		max-width: 480px;
+		height: 27px;
+		padding-left: 7px;
+		box-sizing:border-box;
+		display: inline-block;
+		margin-right: 7px;
+		color:#c3c3c3;
+	}
+	.mobileSearchBar input[type="text"]:focus{
+		color:#000;
+	}
+	.mobileSearchBar input[type="submit"]{
+		display: inline-block;
+	    white-space: nowrap;
+	    background-color: #ddd;
+	    background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+	    background-image: -webkit-linear-gradient(top, #eee, #ccc);
+	    background-image: -moz-linear-gradient(top, #eee, #ccc);
+	    background-image: -ms-linear-gradient(top, #eee, #ccc);
+	    background-image: -o-linear-gradient(top, #eee, #ccc);
+	    background-image: linear-gradient(top, #eee, #ccc);
+	    border: 1px solid #777;
+	    padding: 5px;
+	    text-decoration: none;
+	    box-sizing:border-box;
+	    color: #333;
+	    text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	    -moz-border-radius: .2em;
+	    -webkit-border-radius: .2em;
+	    border-radius: .2em;
+	    -moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	    -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	    box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	}
+	.mobileSearchBar span{
+		display: block;
+		margin-bottom: 7px;
+		color: #fff;
+	}
+	.listing table.list{
+		width: 100%;
+		display: block;
+		margin: 0 0 10px 0;
+		box-sizing: border-box;
+	}
+	.listing table.list tbody{
+		width: 100%;
+		display: block;
+		box-sizing: border-box;
+	}
+	.listing table.list tbody tr{
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid #004990;
+	}
+	.listing table.list tbody tr td{
+		display: block;
+		width: 100%;
+		text-align: justify;
+		overflow: hidden;		
+	}
+	.listing table.list tbody tr:first-child, .listing table.list tbody tr:last-child, .listing table.list tr.endgroup, .listing table.list tr.group{
+		border:none;
+	}
+	.listing table.list tr.even td, .listing table.list tr.odd td{
+		padding-right: 0px;
+	}
+	body.bioslisting .mainbodyB{
+		background: none;
+		background-color: #fff;
+	}
+	body.bioslisting .mainbody{
+		margin-top: 0px;
+	}
 }

@@ -1,0 +1,200 @@
+<html>
+<head>
+	<title>
+		JAMS Responsive Site
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		*{
+			font-family: 'Lato';
+			font-weight: 400;
+			font-size: 14px;
+			color: #4f4f4f;
+		}	
+		a{
+			text-decoration: none;
+			transition: color 0.5s;
+		}	
+		a:hover{
+			color:#31F41D;
+		}
+		h2{
+			color: #177B0C;
+			font-weight: 900;
+			font-size:27px;
+			margin-bottom: 10px;
+		}
+		h3{
+			color: #419638;
+			font-weight: 900;
+			font-size:21px;
+			margin-bottom: 10px;
+		}
+		ul li{
+			list-style-type: decimal-leading-zero;
+			padding: 7px;
+		    border-bottom: 1px solid #419638;
+	        max-width: 240px;
+		}
+		ul li:last-child{
+			border:none;
+		}
+		.container{
+			padding: 17px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>Pages</h2>
+		<ul>
+			<li>
+				<a href="Assets-Files/index.html">Homepage</a> 
+				<br>
+				<span style="color:green">Tested - Sign-off</span>
+			</li>
+			<li>
+				<a href="Assets-Files/neutrals-search/index.html">Neutrals Search</a> 
+				<br>
+				<span style="color:orange">Tested - Needs minor bugfix</span>
+			</li>
+			<li>
+				<a href="Assets-Files/neutral-details.html">Neutrals Details</a> 
+				<br>
+				<span style="color:orange">Tested</span>
+			</li>
+			<li>
+				<a href="Assets-Files/locations/index.html">Locations</a> 
+				<br>
+				<span style="color:orange">Tested</span>
+			</li>
+			<li>
+				<a href="Assets-Files/locations/spesificLocation.html">Location Detail</a> 
+				<br>
+				<span style="color:orange">Tested</span>
+			</li>
+			<li>
+				<a href="Assets-Files/practices/index.html">Practices</a> 
+				<br>
+				<span style="color:orange">Tested</span>
+			</li>
+			<li>
+				<a href="Assets-Files/rules-clauses/index.html">Content Detail (Rules & Clauses)</a> 
+				<br>
+				<span style="color:orange">Tested</span>
+			</li>
+			<li>
+				<a href="Assets-Files/contactus/submit-a-case.html">Submit a Case Form</a> 
+				<br>
+				<span style="color:red">Work in Progress</span>
+			</li>
+			<li>
+				<a href="Assets-Files/contactus/contact-us.html">Contact Us Form</a> 
+				<br>
+				<span style="color:red">Work in Progress</span>
+			</li>
+			<li>
+				<a href="Assets-Files/contactus/CLE-programs-form.html">CLE Programs Form</a> 
+				<br>
+				<span style="color:red">Work in Progress</span>
+			</li>
+			<li>
+				<a href="javascript:void(0);">JAMS connect Form</a> 
+				<br>
+				<span style="color:red">Work in Progress</span>
+			</li>
+			<li>
+				<a href="javascript:void(0);">Search Results</a> 
+				<br>
+				<span style="color:red">Work in Progress</span>
+			</li>
+			<li>
+				<a href="javascript:void(0);">Publications Input and Search and Articles</a> 
+				<br>
+				<span style="color:lightgrey">ETA 02/05/2016</span>
+			</li>
+			<li>
+				<a href="javascript:void(0);">Press Releases Input and Search</a> 
+				<br>
+				<span style="color:lightgrey">ETA 02/05/2016</span>
+			</li>
+			<li>
+				<a href="javascript:void(0);">Events Input and Search</a> 
+				<br>
+				<span style="color:lightgrey">ETA 02/05/2016</span>
+			</li>
+			<li>
+				<a href="javascript:void(0);">About/Diversity including Events scroll in right column</a> 
+				<br>
+				<span style="color:lightgrey">ETA 02/05/2016</span>
+			</li>
+			<li>
+				<a href="javascript:void(0);">Sitemap</a> 
+				<br>
+				<span style="color:lightgrey">ETA 02/05/2016</span>
+			</li>
+			<li style="list-style-type: none; text-align: justify;">
+				If you are on a computer, please refresh the pages after resizing the window to see the actual responsive version, because some pages have scripts that only works on page load, not page resize.
+			</li>
+		</ul>
+	</div>	
+	<div class="container">
+		<h2>HTML Changes</h2>
+		<h3>Navigation</h3>
+		<ul>
+			<li>
+				Add "navtext" attribute to images in the navigation, value will be the text equivalent of the nav item.
+			</li>
+		</ul>
+		<h3>Homepage</h3>
+		<ul>
+			<li>
+				Carousel items, image tag add "responsivesrc" attribute, value will be the source of the new responsive image.
+			</li>
+		</ul>
+		<h3>Neutrals Detail</h3>
+		<ul>
+			<li>
+				Case Manager section add class "responsiveNeutralDetails"
+			</li>
+			<li>
+				General Biograpgy section container(bioswitcher) add class "responsiveBioSwitcher"
+			</li>
+			<li>
+				General Biograpgy "Specialties" a tag add "active", "noLink" class and "specialtiesToggle" id
+			</li>
+			<li>
+				General Biograpgy section General Biography a tag add "biographyToggle" id
+			</li>
+			<li>
+				Neutral quote wrapper div "ceinfo" add class "shortenQuote"
+			</li>
+			<li>
+				Neutral location wrapper div "contact" add class "switchLocation"
+			</li>
+		</ul>
+		<h3>
+			Neutrals Search
+		</h3>
+		<ul>
+			<li>
+				Newest neutrals section wrapper "richtext" add class "moreNeutrals" 
+			</li>
+		</ul>
+		<h3>
+			CLE Programs Form
+		</h3>
+		<ul>
+			<li>
+				CLE Menu table tag, add class "CLEMenu"
+			</li>
+			<li>
+				CLE Menu table, title rows add class "titleRow"
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

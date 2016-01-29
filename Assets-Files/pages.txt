@@ -1,0 +1,62 @@
+______________________________________________________________________________________
+Homepage *
+http://www.jamsadr.com/
+______________________________________________________________________________________
+Neutrals Search *
+http://www.jamsadr.com/neutrals-search/
+______________________________________________________________________________________
+Neutrals Detail *
+http://www.jamsadr.com/sabraw/
+______________________________________________________________________________________
+Content Detail Page
+http://www.jamsadr.com/rules-clauses/
+______________________________________________________________________________________
+Contact Us
+http://www.jamsadr.com/contactus/fbGeneral.aspx?xpST=ContactForm
+______________________________________________________________________________________
+Submit a Case
+http://www.jamsadr.com/contactus/fbGeneral.aspx?xpST=submitaCase
+______________________________________________________________________________________
+Sitemap
+http://www.jamsadr.com/sitemap/xpqSiteMapMnu.aspx?xpST=SiteMap
+______________________________________________________________________________________
+Search Results
+http://www.jamsadr.com/search/xpqSiteSearch.aspx?xpST=Search&qu=Search
+______________________________________________________________________________________
+Press Releases input & Search
+http://www.jamsadr.com/news/xpqPenList.aspx?xpST=NewsResults
+______________________________________________________________________________________
+Events input & Search
+http://www.jamsadr.com/news/xpqPenList.aspx?xpST=EventSearch
+______________________________________________________________________________________
+Locations
+http://www.jamsadr.com/locations/
+http://www.jamsadr.com/jams-ontario/
+______________________________________________________________________________________
+Practices *
+http://www.jamsadr.com/services/xpqServiceDetail.aspx?xpST=ServiceDetail&service=476
+______________________________________________________________________________________
+Publications Input & Search
+http://www.jamsadr.com/articles/
+______________________________________________________________________________________
+
+
+1/22/2016 – Friday
+-	Neutrals Detail (priority 1)  DONE
+-	Locations (priority 2)  DONE 
+-	Content Detail Page (Rules/Clauses, ADR, About, Careers, JAMS Foundation) DONE 
+-	Practices  DONE 
+
+1/29/2016 – Friday
+-	Submit a Case Form DONE 
+-	Contact Us Form DONE 
+-	CLE Programs Form (www.jamsadr.com/contactus/xpqContactUs.aspx?xpST=ContactUs)
+-	JAMS connect Form (www.jamsadr.com/jamsconnect)
+-	Search Results (site search)
+
+2/5/2016 – Friday
+-	Publications Input and Search and Articles
+-	Press Releases Input and Search
+-	Events Input and Search
+-	About/Diversity including Events scroll in right column
+-	Sitemap

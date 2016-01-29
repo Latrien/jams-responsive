@@ -1,0 +1,129 @@
+body {text-align:center;}
+
+* html .middleB {overflow-x:hidden;} /* Breaks printing from Firefox, so this line is for IE6 only */
+*:first-child+html .middleB {overflow-x:hidden;} /* And this is for IE7 only */
+
+.subnav, .sitesearch, .subnav_menu, .header .nav1, .bioswitcher, .pagetools, .footer .nav, .vcard, .more, .tabs, .viewAll, .alpha, div.search, .header .menu, .logo, .tagline, .flash, .pdfadmin {display:none !important;}
+.headerB, .middleC, .middleB, .mainbodyB, .footerB {background:none !important;}
+
+h1 {padding-left:24% !important;padding-right:0 !important;width:76% !important;}
+
+.containermain {width:100%;margin:0 auto;}
+
+.middle {margin-top:-55px;}
+
+.headerB {height:114px;}
+.header {height:auto;}
+.print {display:block;padding:0 34px 14px 0;text-align: center;}
+.tagline {padding:25px 0 44px 0;}
+
+.leftsideB {width:20%;padding:0;padding-top:70px;}
+.leftsideA {padding:0 20px 0 0;}
+.leftside .image {top:0;margin:0;background:none;height:auto;padding-left:0;}
+
+.leftside .nav1 {padding-top:0;}
+
+.rightsideB {margin:0;padding:0;width:20%;height:800px;}
+.rightsideA {padding:0 0 0 20px;}
+.rightside {padding:0;}
+
+.mainbodyB {width:464px; display:table; float:none;}
+.mainbodyA {display:table-row;}
+.mainbody {margin:0 0 0 0 !important;padding:0 20px 0 0;display:table-cell;padding-top:70px;}
+.mainbody h1 {position:static;top:0;background:none;color:#262626;padding:0;width:auto;height:auto;line-height:normal;margin:0 0 10px 0;}
+
+.footerB {height:auto;padding:0; background-color: #FFFFFF; border-top: none; clear:both;}
+.footer {line-height:normal;}
+.footer .text {float:none;text-align:left;padding:30px 0 0 0; display: none;}
+.footerSecondRow {display:none;}
+
+body.detail .leftsideB {width:20%;padding-left:2%;padding-right:2%;padding-top:70px;}
+body.detail .rightsideB {width:auto;max-width:20%;padding-right:2%;margin-left:0;}
+body.detail .mainbodyB {width:53%;float:none;}
+body.detail .mainbody {padding-top:70px;margin-top:0;}
+body.detail .mainbody .relatedlinks {display:none;}
+
+body.aboutdetail .leftsideB {display:none;}
+body.aboutdetail .mainbodyB {width:100%;float:none;}
+body.aboutdetail .middle h1 {padding-left:15px !important;width:100% !important;}
+body.aboutdetail .details {padding-left:15px;}
+
+body.generaldetail .leftsideB {display:none;}
+body.generaldetail .mainbodyB {width:auto;*width:75%;float:none;}
+body.generaldetail .middle h1 {padding-left:15px !important;width:100% !important;}
+body.generaldetail .details {padding-left:15px;}
+
+body.officesdetail .leftsideB {display:none;}
+body.officesdetail .mainbodyB {width:520px; float:none;}
+body.officesdetail .middle h1 {padding-left:15px !important;width:100% !important;}
+body.officesdetail .details {padding-left:15px;}
+
+body.servicesdetail .leftsideB {display:none !important;}
+body.servicesdetail .mainbodyB {width:70%;float:none;}
+body.servicesdetail .middle h1 {padding-left:15px !important;width:100% !important;}
+body.servicesdetail .details {padding-left:15px;}
+
+body.newsdetail .leftsideB {display:none !important;}
+body.newsdetail .mainbodyB {width:70%;float:none;}
+body.newsdetail .middle h1 {padding-left:15px !important;width:70% !important;padding-right:30% !important;}
+body.newsdetail .details {padding-left:15px;}
+
+body.eventsdetail .leftsideB {display:none !important;}
+body.eventsdetail .mainbodyB {width:70%;float:none;;}
+body.eventsdetail .middle h1 {padding-left:15px !important;width:70% !important;padding-right:30% !important;}
+body.eventsdetail .details {padding-left:15px;}
+
+body.pubsdetail .leftsideB {display:none !important;}
+body.pubsdetail .mainbodyB {width:70%;float:none;}
+body.pubsdetail .middle h1 {padding-left:15px !important;width:70% !important;padding-right:30% !important;}
+body.pubsdetail .details {padding-left:15px;}
+
+body.careersdetail .leftsideB {display:none !important;}
+body.careersdetail .mainbodyB {width:70%;float:none;}
+body.careersdetail .middle h1 {padding-left:15px !important;width:70% !important;padding-right:30% !important;}
+body.careersdetail .details {padding-left:15px;}
+
+body.biosdetail {margin-top:0;padding-top:0;line-height:0 !important;font-size:0 !important;margin:0 !important;padding:0 !important;width:100% !important;}
+body.biosdetail .containermain {font-size:12px;line-height:normal;width:100% !important;padding:0 !important;margin:0 !important;}
+body.biosdetail .headerB {height:121px;}
+body.biosdetail .header {}
+body.biosdetail .print {height:121px;padding:0;}
+body.biosdetail .print img {vertical-align:top;}
+body.biosdetail .middle {margin-top:0;}
+body.biosdetail .middleB_wide .middle h1 {background:none;color:#000;position:relative;font-size:11px;font-weight:bold;top:25px;margin:0;line-height:11px;padding:0;}
+body.biosdetail .mainbody {margin:0 !important;padding-top:20px;padding-right:0;position:relative !important;top:0;left:0;display:block;}
+body.biosdetail .mainbody .details .bioTitle {position:absolute;padding:15px 0;font-size:11px;font-weight:normal;}
+body.biosdetail .containermain {width:100%;border:none;}
+body.biosdetail .leftsideB {padding-left:0;padding-top:0;}
+h1 {padding-left:27% !important;padding-right:0 !important;width:70% !important;}
+
+body.biosdetail .mainbodyB {display:block;width:70%;padding:0;margin-left:27%;}
+body.biosdetail .leftside {padding-top:2px;}
+body.biosdetail .leftside .image {top:0;margin:0;background:none;padding:0;}
+body.biosdetail .relatedlinks {display:none;}
+body.biosdetail .narrativebio {padding-top:15px;}
+
+body.search .leftsideB {display:none;}
+body.search .mainbodyB {width:73%;float:none;}
+body.search .middle h1 {padding-left:0 !important;}
+
+body.about .leftsideB {display:none;}
+body.about .mainbodyB {width:73%;float:none;}
+body.about .middle h1 {padding-left:0 !important;}
+
+@media screen { /* PDF only */
+.containermain {width:85%;border-left:100px solid #fff;}
+}
+body.biosdetail .rightsideB {display: none;}
+
+
+
+body.officesdetail .mainbody .contact {left:0;position:static;top:0;margin-bottom:15px;}
+body.officesdetail ul.officesRelInfo {display:none;}
+
+
+
+
+
+body.biosdetail .mainbody {margin:0 !important;padding-top:20px;padding-right:0;position:relative !important;top:0;left:0;}
+body.biosdetail .mainbody .details .bioTitle {position:absolute;left:0 !important;top:0 !important;margin:0;font-size:11px;font-weight:normal;}

@@ -1,0 +1,136 @@
+
+
+
+
+
+/* PDF Packet Builder Script ***********************************************************************************/
+
+//page and control values.
+var linkPacketBuilderView = ".packetBuilderView";
+var linkPacketBuilderQueuePage = ".packetBuilderQueuePage";
+var linkPacketBuilderClearPacket = ".packetBuilderClearPacket";
+var divOverlayScreen = "#overlayScreen";
+var divOverlayPacketBuilder = "#overlayPacketBuilder";
+var pagePacketView = "/FCWSite/Features/PdfPacketBuilder/PacketView.aspx";
+var pagePacketQueue = "/FCWSite/Features/PdfPacketBuilder/PacketQueuePage.aspx";
+var responseError = "<error/>";
+var responseErrorLimit = "<error type=\"limit\"/>";
+var messageOverItemLimit = "You are over the limit of items in your packet.";
+var messageSuccessfulQueueFeedback = "Page has been added to your packet.";
+var messageGeneralError = "A general error has occured accessing the PDF Packet Builder. Please contact an administrator if the problem persists.";
+
+$(document).ready(
+	function()
+	{
+		//view packet builder dialog.
+		$(linkPacketBuilderView).click(
+			function()
+			{
+				viewPacketBuilder();
+				return false;
+			}
+		);
+	    
+		//queue page in packet builder.
+		$(linkPacketBuilderQueuePage).click(
+			function()
+			{
+				queuePage();
+				return false;
+			}
+		);
+	}
+);
+
+//refresh packet view.
+function refreshPacketView()
+{
+	$.ajax(
+		{
+			url: pagePacketView,
+			cache: false,
+			success:
+				function(responseText)
+					{
+						if (responseText == responseError)
+							showGeneralError();
+						else
+							$(divOverlayPacketBuilder).html(responseText);
+					},
+			failure:
+				function()
+					{
+						showGeneralError();
+					}
+			}
+	);
+}
+
+//view packet builder.
+function viewPacketBuilder()
+{
+	var ie6OrBelow = ($.browser.msie && parseInt($.browser.version) < 7);
+
+	if (!ie6OrBelow)
+	{
+		var overlayScreen = $(divOverlayScreen);
+		overlayScreen.css("opacity", 0.6);
+		overlayScreen.fadeIn("fast");
+	}
+
+	var jWindow = $(window);
+	var h = jWindow.height();
+	var w = jWindow.width();
+
+	var overlayPacketBuilder = $(divOverlayPacketBuilder);
+	overlayPacketBuilder.css("top", (h / 2) - (overlayPacketBuilder.height() / 2));
+	overlayPacketBuilder.css("left", (w / 2) - (overlayPacketBuilder.width() / 2));
+
+	if (ie6OrBelow)
+		overlayPacketBuilder.css("position", "absolute");
+
+	overlayPacketBuilder.show();
+
+	refreshPacketView();
+}
+
+//queue page.
+function queuePage()
+{
+	$.ajax(
+		{	//fullURL comes from interior.master javascript
+			url: pagePacketQueue, 
+			data: ({ page: escape(fullURL), title: escape(document.title) }),
+			cache: false,
+			type: "post",
+			success:
+				function(responseText)
+				{
+					if (responseText == responseErrorLimit)
+						alert(messageOverItemLimit);
+					else if (responseText == responseError)
+						showGeneralError();
+					else
+					{
+						var link = $(linkPacketBuilderQueuePage);
+	                    
+						if (link.length > 0)
+							link.innerText = messageSuccessfulQueueFeedback;
+						else
+							alert(messageSuccessfulQueueFeedback);
+					}
+				},
+			failure:
+			function()
+			{
+				showGeneralError();
+			}
+		}
+	);
+} 
+
+//show general error.
+function showGeneralError()
+{
+	alert(messageGeneralError);
+}

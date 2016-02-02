@@ -1383,4 +1383,36 @@ body.servicesdetail .listing .federalJudgeMarker
 	body.bioslisting .mainbody{
 		margin-top: 0px;
 	}
+	body.contactdetail .richtext.downloadMobile {
+	    padding: 7px;
+	    background-color: #BECEE0;
+	    border: 1px solid #134B8E;
+	    text-align: left;
+	    font-size: 12px;
+	    margin-bottom: 17px;
+	}
+	.categoryTitle{
+		background-color: #276ABB;
+	    padding: 7px;
+	    margin-bottom: 7px;
+	    transition: background-color 0.3s;
+	    cursor: pointer;
+	}
+	.categoryTitle:hover{
+		background-color: #5C9DEA;
+	}
+	.categoryTitle:first-child{
+		margin-top: 17px;
+	}
+	.categoryTitle h2{
+		color: #fff !important;
+		margin-top: 0px;
+	}
+	.expandResults{
+	    padding: 7px;
+	}
+	.expandResults td{
+		text-align: right !important;
+		cursor: pointer;
+	}
 }

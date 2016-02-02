@@ -394,7 +394,37 @@ var responsiveApp = {
 			$(this).show();			
 		});	
 		$('#jamsConnectReadMore').hide();
+	},
+	pdfDownloadSwitch: function(){
+		$('.downloadMobile').each(function(index, el) {
+			$(this).find('img').remove();
+			$(this).find('br').remove();
+			var pdfSwitcher = $(this).detach();	
+			$('.CLEMenu').parent().append(pdfSwitcher);
+		});		
+	},
+	/*
+	shortenSearchResults: function(){
+		var categoryIndex = 0;		
+		$('.search .list tr').each(function(){
+			if($(this).hasClass('group')){
+				$(this).addClass('categoryTitle').attr('openCategory', categoryIndex);
+				categoryIndex++;
+			}else{
+				$(this).addClass('categoryContent').attr('categoryIndex', categoryIndex-1);
+				$(this).hide();
+			}
+		});
+	},
+	searchResultTrigger: function(){
+		var showCategory = $(this).attr('openCategory');
+		$('.search .list tr').each(function() {
+			if($(this).attr('categoryIndex') == showCategory){
+				$(this).toggle();
+			}
+		});
 	}
+	*/
 }	
 
 window.onload = function(e){ 
@@ -412,6 +442,7 @@ window.onload = function(e){
 		$('body').on('click', '#searchSeeMore', responsiveApp.neutralsSearchSeeMoreTrigger);
 		$('body').on('click', '.titleRow', responsiveApp.cleMenuTrigger);
 		$('body').on('click', '#jamsConnectReadMore', responsiveApp.jamsConnectReadMoreTrigger);
+		//$('body').on('click', '.categoryTitle', responsiveApp.searchResultTrigger);
 
 		responsiveApp.navSlider();	
 		responsiveApp.neutralDetails();
@@ -422,5 +453,7 @@ window.onload = function(e){
 		responsiveApp.neutralsSearchSeeMore();
 		responsiveApp.cleMenuInit();
 		responsiveApp.jamsConnectShorten();
+		responsiveApp.pdfDownloadSwitch();
+		//responsiveApp.shortenSearchResults();
 	}
 };

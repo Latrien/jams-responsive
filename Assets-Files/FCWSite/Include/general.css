@@ -1415,4 +1415,8 @@ body.servicesdetail .listing .federalJudgeMarker
 		text-align: right !important;
 		cursor: pointer;
 	}
+	.pubslisting .mainbodyB{
+		background: none;
+		background-color: #fff;		
+	}
 }

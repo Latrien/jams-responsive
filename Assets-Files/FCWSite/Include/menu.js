@@ -425,6 +425,10 @@ var responsiveApp = {
 		});
 	}
 	*/
+	articlesSearch: function(){
+		var articleSearchSwitch = $('.pubslisting').find('.search').detach();
+		$('.pubslisting .mainbodyA').find('.mainbody').append(articleSearchSwitch);
+	}
 }	
 
 window.onload = function(e){ 
@@ -455,5 +459,6 @@ window.onload = function(e){
 		responsiveApp.jamsConnectShorten();
 		responsiveApp.pdfDownloadSwitch();
 		//responsiveApp.shortenSearchResults();
+		responsiveApp.articlesSearch();
 	}
 };

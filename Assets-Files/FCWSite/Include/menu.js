@@ -428,6 +428,28 @@ var responsiveApp = {
 	articlesSearch: function(){
 		var articleSearchSwitch = $('.pubslisting').find('.search').detach();
 		$('.pubslisting .mainbodyA').find('.mainbody').append(articleSearchSwitch);
+	},
+	shortenListing: function(){
+		$('.shortenListing .list').find('tr').each(function(){
+			if($(this).index()>16){
+				$(this).hide();				
+			}
+		});
+		$('.shortenListing').append("<div style='margin-top:17px; display: inline;' id='shortenListingSeeMore'><a href='javascript:void(0);'>See more</a></div>");
+	},
+	shortenListingTrigger: function(){
+		$('.shortenListing .list').find('tr').each(function(){
+			$(this).show();		
+		});
+		$('#shortenListingSeeMore').hide();
+	},
+	newsSearch: function(){
+		var newsSearchSwitch = $('.newssearch').find('.search').detach();
+		$('.newssearch .mainbodyA').find('.mainbody').append(newsSearchSwitch);
+	},
+	eventsSearch: function(){		
+		var eventsSearch = $('.eventssearch').find('.search').detach();
+		$('.eventssearch .mainbodyA').find('.mainbody').append(eventsSearch);
 	}
 }	
 
@@ -447,6 +469,7 @@ window.onload = function(e){
 		$('body').on('click', '.titleRow', responsiveApp.cleMenuTrigger);
 		$('body').on('click', '#jamsConnectReadMore', responsiveApp.jamsConnectReadMoreTrigger);
 		//$('body').on('click', '.categoryTitle', responsiveApp.searchResultTrigger);
+		$('body').on('click', '#shortenListingSeeMore', responsiveApp.shortenListingTrigger);
 
 		responsiveApp.navSlider();	
 		responsiveApp.neutralDetails();
@@ -460,5 +483,8 @@ window.onload = function(e){
 		responsiveApp.pdfDownloadSwitch();
 		//responsiveApp.shortenSearchResults();
 		responsiveApp.articlesSearch();
+		responsiveApp.shortenListing();
+		responsiveApp.newsSearch();
+		responsiveApp.eventsSearch();
 	}
 };

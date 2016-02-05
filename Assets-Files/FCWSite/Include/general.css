@@ -1419,21 +1419,38 @@ body.servicesdetail .listing .federalJudgeMarker
 		background: none;
 		background-color: #fff;		
 	}
-	body.pubslisting .search{
+	body.pubslisting .search, body.news .search, body.eventssearch .search{
 		border: 1px solid #004990;
 		padding: 7px;
 		padding-right: 10px;
 		background-color: #c3c3c3;
 		margin-bottom: 21px;
 	}
-	body.pubslisting .mainbody{
+	body.pubslisting .mainbody, body.news .mainbody, body.eventssearch .mainbody{
 		margin-top: 27px;
 	}
-	body.pubslisting .search input{
+	body.pubslisting .search input, body.news .search input, body.eventssearch input{
 		height: 27px;
 	}
-	body.pubslisting .search select{
+	body.pubslisting .search select, body.news .search select, body.eventssearch select{
 		height: 27px;
 	    width: 101% !important;
+	}
+	body.news .mainbodyB, body.eventssearch .mainbodyB{
+		background: #fff;
+	}
+	body.generaldetail .sitemap tbody, body.generaldetail .sitemap tr, body.generaldetail td{
+	    display: block;
+	    box-sizing: border-box;
+	    width: 100%;
+	}
+	body.generaldetail .sitemap tbody li{
+		padding: 7px;
+	}
+	body.aboutdetail .mainbodyB{
+		background: none;
+	}
+	body.aboutdetail .mainbody{
+		margin-top: 27px;
 	}
 }

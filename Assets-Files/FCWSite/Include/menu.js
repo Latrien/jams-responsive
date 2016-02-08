@@ -450,6 +450,10 @@ var responsiveApp = {
 	eventsSearch: function(){		
 		var eventsSearch = $('.eventssearch').find('.search').detach();
 		$('.eventssearch .mainbodyA').find('.mainbody').append(eventsSearch);
+	},
+	diversityAdjust: function(){
+		var diversityRight = $('.diversityMoveCenter').detach();
+		$('.aboutdetail').find('.mainbody').append(diversityRight);
 	}
 }	
 
@@ -486,5 +490,6 @@ window.onload = function(e){
 		responsiveApp.shortenListing();
 		responsiveApp.newsSearch();
 		responsiveApp.eventsSearch();
+		responsiveApp.diversityAdjust();
 	}
 };

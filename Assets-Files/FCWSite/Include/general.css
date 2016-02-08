@@ -1259,7 +1259,7 @@ body.servicesdetail .listing .federalJudgeMarker
 		display: block;
 	}
 	body.contactdetail .buttons{
-		margin: 0px auto;
+		margin: 0px auto !important;
 		width: 100%;
 		max-width: 480px;
 		margin-top: 17px;
@@ -1383,7 +1383,7 @@ body.servicesdetail .listing .federalJudgeMarker
 	body.bioslisting .mainbody{
 		margin-top: 0px;
 	}
-	body.contactdetail .richtext.downloadMobile {
+	.downloadMobile {
 	    padding: 7px;
 	    background-color: #BECEE0;
 	    border: 1px solid #134B8E;
@@ -1452,5 +1452,25 @@ body.servicesdetail .listing .federalJudgeMarker
 	}
 	body.aboutdetail .mainbody{
 		margin-top: 27px;
+	}
+	body.biossearch .ajaxOCard,body.contactdetail .ajaxOCard{
+		width: 25%;
+	}
+	body.aboutdetail div.rightside div.richtext{
+		width: 100%;
+	}
+	body.aboutdetail div.rightside div.richtext img{
+		display: none;
+	}
+	body.aboutdetail div.rightside .homepagefirmeventslist .header{
+		border-bottom: 1px solid #004990;
+		margin-bottom: 7px;
+		padding-bottom: 7px;
+	}
+	body.aboutdetail div.rightside .homepagefirmeventslist .body{
+		width: 100%;
+	}
+	body.aboutdetail div.rightside .homepagefirmeventslist table{
+		width: 100%;
 	}
 }

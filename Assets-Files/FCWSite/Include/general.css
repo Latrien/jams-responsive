@@ -1226,6 +1226,7 @@ body.servicesdetail .listing .federalJudgeMarker
 	}
 	body.detail .leftsideB{
 		box-sizing:border-box;
+		padding-bottom: 67px;
 	}
 	body.contactdetail .mainbody{
 		margin-top: 20px;
@@ -1353,6 +1354,7 @@ body.servicesdetail .listing .federalJudgeMarker
 		display: block;
 		margin: 0 0 10px 0;
 		box-sizing: border-box;
+		font-size:13px;
 	}
 	.listing table.list tbody{
 		width: 100%;
@@ -1472,5 +1474,53 @@ body.servicesdetail .listing .federalJudgeMarker
 	}
 	body.aboutdetail div.rightside .homepagefirmeventslist table{
 		width: 100%;
+	}
+	body.servicesdetail .mainbody, body.servicesdetail .mainbodyB{
+		background:none;
+	}
+	body.servicesdetail .mainbody{
+	    margin-top: 71px;
+	}
+	body.servicesdetail .relinfo{
+		margin-top: 27px;
+	}
+	.rightContentPlaceholder .richtext .borderedLink{
+		padding: 7px;
+		background-color: #BECEE0;
+		border: 1px solid #134B8E;
+		text-align: left;
+		font-size: 12px;
+		margin-bottom: 3px;
+		display: block;
+	}
+	.rightContentPlaceholder .moveLeft{
+		margin-bottom: 11px;
+	}
+	.rightContentPlaceholder .richtext br{
+		display: none;
+	}
+	.rightContentPlaceholder img{
+		display: none;
+	}
+	.twoColumnTable{
+		width: 100%;
+	}
+	.twoColumnTable td{
+		width: auto !important;
+		display: initial !important;
+	}
+	.twoColumnTable tr{
+		display: block;
+		margin-bottom: 7px;
+	}
+	.alpha .letter{
+		padding: 3px;
+	}
+	.alpha .letter a{
+		padding: 7px;
+		font-size: 14px;
+	}
+	body.contactdetail ul.fields li.bees{
+		display: none;
 	}
 }

@@ -454,6 +454,13 @@ var responsiveApp = {
 	diversityAdjust: function(){
 		var diversityRight = $('.diversityMoveCenter').detach();
 		$('.aboutdetail').find('.mainbody').append(diversityRight);
+	},
+	adjustRightSide: function(){
+		
+		$('.moveLeft').each(function(index, el) {
+			var rightSideContent = $('.moveLeft').detach();
+			$('.rightContentPlaceholder').append(rightSideContent);
+		});
 	}
 }	
 
@@ -491,5 +498,6 @@ window.onload = function(e){
 		responsiveApp.newsSearch();
 		responsiveApp.eventsSearch();
 		responsiveApp.diversityAdjust();
+		responsiveApp.adjustRightSide();
 	}
 };

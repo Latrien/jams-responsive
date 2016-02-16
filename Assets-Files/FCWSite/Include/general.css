@@ -956,7 +956,7 @@ body.servicesdetail .listing .federalJudgeMarker
 	.mainbodyB{
 		background-size: contain;
 		width: 100%;
-		background-position: 0px 50px;
+		background-position: 0px 0px;
 	}
 	body.detail .mainbodyB{
 		width: 100%;
@@ -968,9 +968,6 @@ body.servicesdetail .listing .federalJudgeMarker
 	}
 	.body .list{
 		width: 100%;
-	}
-	.body .list tr:nth-of-type(1n+4) {
-		display: none;
 	}
 	.boxes{
 		display:flex;
@@ -1034,7 +1031,7 @@ body.servicesdetail .listing .federalJudgeMarker
 		order: 2;
 	}
 	.mainbody {
-		margin: 60px 23px 0px;
+		margin: 10px 23px 0px;
 	    display: flex;
 	    flex-flow: column;
 	}
@@ -1369,7 +1366,7 @@ body.servicesdetail .listing .federalJudgeMarker
 	.listing table.list tbody tr td{
 		display: block;
 		width: 100%;
-		text-align: justify;
+		text-align: inherit;
 		overflow: hidden;		
 	}
 	.listing table.list tbody tr:first-child, .listing table.list tbody tr:last-child, .listing table.list tr.endgroup, .listing table.list tr.group{

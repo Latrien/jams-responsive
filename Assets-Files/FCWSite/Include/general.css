@@ -1201,7 +1201,7 @@ body.servicesdetail .listing .federalJudgeMarker
 		width: 100%;
 		clear: both;
 	}
-	body.biossearch .searchSeeMore{
+	body.biossearch .searchSeeMore, body.bioslisting .searchSeeMore{
 		width: 100%;
 		background: #134B8D;
 		background: -moz-linear-gradient(top, #134B8D 0%, #276ABB 100%);
@@ -1211,7 +1211,7 @@ body.servicesdetail .listing .federalJudgeMarker
 		padding: 7px;
 		box-sizing:border-box;
 	}
-	body.biossearch .searchSeeMore a{
+	body.biossearch .searchSeeMore a, body.bioslisting .searchSeeMore a{
 		color: #fff;
 		text-align: center;
 		vertical-align: middle;
@@ -1519,5 +1519,20 @@ body.servicesdetail .listing .federalJudgeMarker
 	}
 	body.contactdetail ul.fields li.bees{
 		display: none;
+	}
+	body.bioslisting .middleB .rightsideB{
+		margin-top: 0px;
+	}
+	body.bioslisting .listing table.list tr.even td{
+		box-sizing: border-box;
+	}
+	.listing table.list td.shortInfoB_xxxxxx_{
+		width: 100%;
+	}
+	body.bioslisting .criteria{
+		border-bottom: 1px solid #004990;
+		background-color: #EBEBEB;
+		padding: 7px;
+		margin-top: 7px;
 	}
 }

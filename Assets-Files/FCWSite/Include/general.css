@@ -1535,4 +1535,7 @@ body.servicesdetail .listing .federalJudgeMarker
 		padding: 7px;
 		margin-top: 7px;
 	}
+	#contentLimit{
+		margin-top: 11px;
+	}
 }

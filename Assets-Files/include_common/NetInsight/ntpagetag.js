@@ -3,7 +3,7 @@
  * Visit http://www.unica.com for more information.
  */
 
-var NTPT_IMGSRC = '/include_common/NetInsight/ntpagetag.gif';
+var NTPT_IMGSRC = 'include_common/NetInsight/ntpagetag.gif';
 
 var NTPT_FLDS = new Object();
 NTPT_FLDS.lc = true; // Document location

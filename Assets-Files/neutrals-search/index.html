@@ -12,7 +12,6 @@
       <link rel="stylesheet" href="../FCWSite/Include/header.css" type="text/css" />
       <link rel="stylesheet" href="../FCWSite/Include/footer.css" type="text/css" />
       <link rel="stylesheet" href="../FCWSite/Include/print.css" type="text/css" media="print"/>
-      <script src="FCWSite/Include/jquery-1.8.3.min.js" language="javascript" type="text/javascript"></script>
       <script src="../FCWSite/Include/menu.js" language="javascript" type="text/javascript"></script>
       <script src="../FCWSite/Include/spamproof.aspx" language="javascript" type="text/javascript"></script>
    </head>
@@ -724,23 +723,23 @@
                                     </div>
                                  </div>
                               </div>
-                              <div class="search" onkeypress="javascript: return WebForm_FireDefaultButton(event, 'ctl00_xprLayout_cphMainContent_buttons_xpr_layout_raisin_buttonSearch_searchButton')">
+                              <div class="search" onkeypress="javascript: return WebForm_FireDefaultButton(event, 'searchButton')">
                                  <ul class="fields">
                                     <li class="lastname">
                                        <label>
                                        Last Name:
-                                       </label><input name="ctl00$xprLayout$cphMainContent$fields_xpr_layout_raisin_searchLastName$txtAttorneySearch_LastName" type="text" id="ctl00_xprLayout_cphMainContent_fields_xpr_layout_raisin_searchLastName_txtAttorneySearch_LastName" name="txtAttorneySearch_LastName" />
+                                       </label><input name="txtAttorneySearch_LastName" type="text" id="txtAttorneySearch_LastName"/>
                                     </li>
                                     <li class="firstname">
                                        <label>
                                        First Name:
-                                       </label><input name="ctl00$xprLayout$cphMainContent$fields_xpr_layout_raisin_searchFirstName$txtAttorneySearch_FirstName" type="text" id="ctl00_xprLayout_cphMainContent_fields_xpr_layout_raisin_searchFirstName_txtAttorneySearch_FirstName" name="txtAttorneySearch_FirstName" />
+                                       </label><input name="txtAttorneySearch_FirstName" type="text" id="txtAttorneySearch_FirstName"/>
                                     </li>
                                     <li class="office">
                                        <label>
                                        Resolution Center:
                                        </label>
-                                       <select name="ctl00$xprLayout$cphMainContent$fields_xpr_layout_raisin_searchOffice$cmbAttorneySearch_Office" id="ctl00_xprLayout_cphMainContent_fields_xpr_layout_raisin_searchOffice_cmbAttorneySearch_Office" name="cmbAttorneySearch_Office">
+                                       <select name="cmbAttorneySearch_Office" id="cmbAttorneySearch_Office">
                                           <option selected="selected" value=""></option>
                                           <option value="970d110b-05d6-491f-8a46-18722306355a">Atlanta, Georgia</option>
                                           <option value="265f1552-d6e7-4da3-93a0-5fb01cae2ad5">Boca Raton, Florida</option>
@@ -771,7 +770,7 @@
                                     </li>
                                     <li class="services">
                                        <label>Areas of Expertise:</label>
-                                       <select name="ctl00$xprLayout$cphMainContent$fields_xpr_layout_raisin_searchServices_8c2359e9d_54ee_718c_8454_9590513c2c2$ddlSearchServices" id="ctl00_xprLayout_cphMainContent_fields_xpr_layout_raisin_searchServices_8c2359e9d_54ee_718c_8454_9590513c2c2_ddlSearchServices">
+                                       <select name="ddlSearchServices" id="ddlSearchServices">
                                           <option selected="selected" value=""></option>
                                           <option value="f6b6d707-1cfc-4f72-8c4e-aa6fbba66a71">&#160;&#160;&#160;Accounting/Finance</option>
                                           <option value="7d17179c-5d82-4faf-b2af-9d2f1b6d318a">&#160;&#160;&#160;Administrative Law</option>
@@ -823,7 +822,7 @@
                                        <label>
                                        Languages:
                                        </label>
-                                       <select name="ctl00$xprLayout$cphMainContent$fields_xpr_layout_raisin_searchLanguage$cmbAttorneySearch_Language" id="ctl00_xprLayout_cphMainContent_fields_xpr_layout_raisin_searchLanguage_cmbAttorneySearch_Language" name="cmbAttorneySearch_Language">
+                                       <select name="cmbAttorneySearch_Language" id="cmbAttorneySearch_Language">
                                           <option selected="selected" value=""></option>
                                           <option value="4e26e13f-a4db-47a9-8f06-928cff1f024b">Danish</option>
                                           <option value="bb35f84b-ae59-4555-9018-04ca038fb6db">English</option>
@@ -843,15 +842,15 @@
                                     <li class="keyword">
                                        <label>
                                        Keyword:
-                                       </label><input name="ctl00$xprLayout$cphMainContent$fields_xpr_layout_raisin_searchKeyword$txtAttorneySearch_Keyword" type="text" id="ctl00_xprLayout_cphMainContent_fields_xpr_layout_raisin_searchKeyword_txtAttorneySearch_Keyword" name="txtAttorneySearch_Keyword" /> 
+                                       </label><input name="txtAttorneySearch_Keyword" type="text" id="txtAttorneySearch_Keyword"/> 
                                     </li>
                                  </ul>
                                  <ul class="buttons">
                                     <li class="clear">
-                                       <input type="submit" name="ctl00$xprLayout$cphMainContent$buttons_xpr_layout_raisin_buttonClear$ctxResetButton" value="Reset" onclick="javascript:document.forms[0].reset();return false;" id="ctl00_xprLayout_cphMainContent_buttons_xpr_layout_raisin_buttonClear_ctxResetButton" />
+                                       <input type="submit" name="ctxResetButton" value="Reset" onclick="javascript:document.forms[0].reset();return false;" id="ctxResetButton" />
                                     </li>
                                     <li class="submit">
-                                       <input type="submit" name="ctl00$xprLayout$cphMainContent$buttons_xpr_layout_raisin_buttonSearch$searchButton" value="Search" id="ctl00_xprLayout_cphMainContent_buttons_xpr_layout_raisin_buttonSearch_searchButton" />
+                                       <input type="submit" name="searchButton" value="Search" id="searchButton" />
                                     </li>
                                  </ul>
                               </div>
@@ -983,15 +982,6 @@
                </div>
             </div>
       </div>
-      <link href="../fcwsite/features/pdfpacketbuilder/include/styles/packetbuilder.css" type="text/css" rel="Stylesheet" />
-      <script src="../fcwsite/features/pdfpacketbuilder/include/scripts/packetbuilder/packetbuilder.js.html" type="text/javascript"></script>
-      <div id="overlayScreen"></div>
-      <div id="overlayPacketBuilder">
-      </div>
-      <div>
-         <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1A8BF101" />
-         <input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
-      </div>
       <script type="text/javascript">
          //<![CDATA[
          
@@ -1077,7 +1067,7 @@
                  (i[r].q = i[r].q || []).push(arguments)
              }, i[r].l = 1 * new Date(); a = s.createElement(o),
              m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-         })(window, document, 'script', '../../www.google-analytics.com/analytics.js', 'ga');
+         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
          
          ga('create', 'UA-35447869-2', 'jamsadr.com');
          ga('send', 'pageview');

@@ -458,7 +458,7 @@ var responsiveApp = {
 					$(this).hide();
 				}
 			});		
-
+			$('#LessContentLimit').remove();
 			$('.limitContent').append("<div id='contentLimit'><a href='javascript:void(0);'>" + readMoreText + "</a></div>");
 
 			if($('.limitContent').attr('readmoredesign')){
@@ -468,10 +468,12 @@ var responsiveApp = {
 		}
 	},
 	contentLimitTrigger: function(){
+		var readLessText = $('.limitContent').attr('readlesstext');	
 		$('.limitContent').children().each(function(){
 			$(this).show();
 		});	
 		$('#contentLimit').remove();
+		$('.limitContent').append("<div id='LessContentLimit'><a href='javascript:void(0);'>" + readLessText + "</a></div>");
 	}
 }	
 
@@ -492,6 +494,7 @@ window.onload = function(e){
 		$('body').on('click', '#jamsConnectReadMore', responsiveApp.jamsConnectReadMoreTrigger);
 		$('body').on('click', '#shortenListingSeeMore', responsiveApp.shortenListingTrigger);
 		$('body').on('click', '#contentLimit', responsiveApp.contentLimitTrigger);
+		$('body').on('click', '#LessContentLimit', responsiveApp.limitParaghraps);
 
 		responsiveApp.navSlider();	
 		responsiveApp.neutralDetails();

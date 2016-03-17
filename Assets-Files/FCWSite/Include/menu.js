@@ -449,31 +449,52 @@ var responsiveApp = {
 		});
 	},
 	limitParaghraps: function(){
-		if($('.limitContent').attr('maxparagraphs') && $('.limitContent').attr('readmoretext')){
-			var contentLimit = $('.limitContent').attr('maxparagraphs');
-			var readMoreText = $('.limitContent').attr('readmoretext');				
+		$('.limitContent').each(function(index, el) {
+			if($(this).attr('maxparagraphs') && $(this).attr('readmoretext')){
+				var contentLimit = $(this).attr('maxparagraphs');
+				var readMoreText = $(this).attr('readmoretext');				
 
-			$('.limitContent').children().each(function(){
-				if($(this).index()>contentLimit-1){
-					$(this).hide();
+				$(this).children().each(function(){
+					if($(this).index()>contentLimit-1){
+						$(this).hide();
+					}
+				});		
+				$('.LessContentLimit').remove();
+				$(this).append("<div class='contentLimit'><a href='javascript:void(0);'>" + readMoreText + "</a></div>");
+
+				if($(this).attr('readmoredesign')){
+					var customClass = $(this).attr('readmoredesign');	
+					$('.contentLimit').addClass(customClass);
 				}
-			});		
-			$('#LessContentLimit').remove();
-			$('.limitContent').append("<div id='contentLimit'><a href='javascript:void(0);'>" + readMoreText + "</a></div>");
-
-			if($('.limitContent').attr('readmoredesign')){
-				var customClass = $('.limitContent').attr('readmoredesign');	
-				$('#contentLimit').addClass(customClass);
 			}
+		});		
+	},
+	limitParaghrapsTrigger: function(){
+		var contentLimit = $(this).closest('.limitContent').attr('maxparagraphs');
+		var readMoreText = $(this).closest('.limitContent').attr('readmoretext');				
+
+		$(this).closest('.limitContent').children().each(function(){
+			if($(this).index()>contentLimit-1){
+				$(this).hide();
+			}
+		});		
+		
+		$(this).closest('.limitContent').append("<div class='contentLimit'><a href='javascript:void(0);'>" + readMoreText + "</a></div>");
+
+		if($(this).closest('.limitContent').attr('readmoredesign')){
+			var customClass = $(this).attr('readmoredesign');	
+			$(this).closest('.contentLimit').addClass(customClass);
 		}
+		$(this).closest('.LessContentLimit').remove();
 	},
 	contentLimitTrigger: function(){
-		var readLessText = $('.limitContent').attr('readlesstext');	
-		$('.limitContent').children().each(function(){
+		var readLessText = $(this).closest('.limitContent').attr('readlesstext');	
+		$(this).closest('.limitContent').children().each(function(){
 			$(this).show();
-		});	
-		$('#contentLimit').remove();
-		$('.limitContent').append("<div id='LessContentLimit'><a href='javascript:void(0);'>" + readLessText + "</a></div>");
+		});			
+		$(this).closest('.limitContent').append("<div class='LessContentLimit'><a href='javascript:void(0);'>" + readLessText + "</a></div>");
+		$(this).closest('.contentLimit').remove();
+		
 	}
 }	
 
@@ -493,8 +514,8 @@ window.onload = function(e){
 		$('body').on('click', '.titleRow', responsiveApp.cleMenuTrigger);
 		$('body').on('click', '#jamsConnectReadMore', responsiveApp.jamsConnectReadMoreTrigger);
 		$('body').on('click', '#shortenListingSeeMore', responsiveApp.shortenListingTrigger);
-		$('body').on('click', '#contentLimit', responsiveApp.contentLimitTrigger);
-		$('body').on('click', '#LessContentLimit', responsiveApp.limitParaghraps);
+		$('body').on('click', '.contentLimit', responsiveApp.contentLimitTrigger);
+		$('body').on('click', '.LessContentLimit', responsiveApp.limitParaghrapsTrigger);
 
 		responsiveApp.navSlider();	
 		responsiveApp.neutralDetails();

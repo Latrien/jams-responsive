@@ -932,10 +932,6 @@ body.servicesdetail .listing .federalJudgeMarker
 	body.home .homebottom .boxes .recentPEN .events{
 		margin-bottom: 27px;
 	}
-	body.home .homebottom .boxes .recentPEN .homepagefirmeventslist .body{
-		overflow: auto;
-		height: auto;
-	}
 	body.home .homebottom .boxes .recentPEN table.list tr.even:last-child td{
 		border: none;
 		border-top: 1px solid #e1e1e1;
@@ -1537,5 +1533,8 @@ body.servicesdetail .listing .federalJudgeMarker
 	}
 	#contentLimit{
 		margin-top: 11px;
+	}
+	.operation_.active{
+		font-weight: bold;
 	}
 }

@@ -302,6 +302,8 @@ var responsiveApp = {
 		$('.details .ceinfo').each(function(){
 			$(this).hide();
 		});
+
+		$('#specialtiesToggle').prepend('<div class="small-menu-btn"><div></div><span></span><span></span><span></span></div>');
 		//
 	},
 	readMoreBtn : function(){		

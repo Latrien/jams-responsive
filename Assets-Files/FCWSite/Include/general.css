@@ -1537,4 +1537,17 @@ body.servicesdetail .listing .federalJudgeMarker
 	.operation_.active{
 		font-weight: bold;
 	}
+	.small-menu-btn{
+		cursor: pointer;
+		display: inline-block;
+		margin-right: 3px;
+		vertical-align: middle;
+	}
+	.small-menu-btn span{
+		display: block;
+		width: 11px;
+		height: 2px;
+		margin: 2px 0px;
+		background: #124A8D;
+	}
 }
